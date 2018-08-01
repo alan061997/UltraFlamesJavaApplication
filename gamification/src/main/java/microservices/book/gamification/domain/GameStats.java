@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * This object contains the result of one or many iterations of the game.
  * It may contain any combination of {@link ScoreCard} objects and {@link BadgeCard} objects.
- *
+ * <p>
  * It can be used as a delta (as a single game iteration) or to represent the total amount of score / badges.
  */
 @RequiredArgsConstructor
@@ -34,6 +34,7 @@ public final class GameStats {
 
     /**
      * Factory method to build an empty instance (zero points and no badges)
+     *
      * @param userId the user's id
      * @return a {@link GameStats} object with zero score and no badges
      */

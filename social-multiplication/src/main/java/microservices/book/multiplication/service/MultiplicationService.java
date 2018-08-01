@@ -17,7 +17,7 @@ public interface MultiplicationService {
 
     /**
      * @return true if the attempt matches the result of the
-     *         multiplication, false otherwise.
+     * multiplication, false otherwise.
      */
     boolean checkAttempt(final MultiplicationResultAttempt resultAttempt);
 

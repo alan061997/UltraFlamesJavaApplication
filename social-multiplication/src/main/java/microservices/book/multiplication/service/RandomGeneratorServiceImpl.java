@@ -1,6 +1,7 @@
 package microservices.book.multiplication.service;
 
 import org.springframework.stereotype.Service;
+
 import java.util.Random;
 
 @Service

@@ -15,6 +15,7 @@ public interface ScoreCardRepository extends CrudRepository<ScoreCard, Long> {
 
     /**
      * Gets the total score for a given user, being the sum of the scores of all his ScoreCards.
+     *
      * @param userId the id of the user for which the total score should be retrieved
      * @return the total score for the given user
      */
@@ -23,6 +24,7 @@ public interface ScoreCardRepository extends CrudRepository<ScoreCard, Long> {
 
     /**
      * Retrieves a list of {@link LeaderBoardRow}s representing the Leader Board of users and their total score.
+     *
      * @return the leader board, sorted by highest score first.
      */
     @Query("SELECT NEW microservices.book.gamification.domain.LeaderBoardRow(s.userId, SUM(s.score)) " +
@@ -32,6 +34,7 @@ public interface ScoreCardRepository extends CrudRepository<ScoreCard, Long> {
 
     /**
      * Retrieves all the ScoreCards for a given user, identified by his user id.
+     *
      * @param userId the id of the user
      * @return a list containing all the ScoreCards for the given user, sorted by most recent.
      */

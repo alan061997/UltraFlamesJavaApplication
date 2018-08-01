@@ -45,7 +45,7 @@ public class LeaderBoardControllerTest {
     }
 
     @Test
-    public void getLeaderBoardTest() throws Exception{
+    public void getLeaderBoardTest() throws Exception {
         // given
         LeaderBoardRow leaderBoardRow1 = new LeaderBoardRow(1L, 500L);
         LeaderBoardRow leaderBoardRow2 = new LeaderBoardRow(2L, 400L);

@@ -44,7 +44,7 @@ public class UserStatsControllerTest {
     }
 
     @Test
-    public void getUserStatsTest() throws Exception{
+    public void getUserStatsTest() throws Exception {
         // given
         GameStats gameStats = new GameStats(1L, 2000, Collections.singletonList(Badge.GOLD_MULTIPLICATOR));
         given(gameService.retrieveStatsForUser(1L)).willReturn(gameStats);

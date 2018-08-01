@@ -171,7 +171,7 @@ public class GameServiceImplTest {
 
     private List<ScoreCard> createNScoreCards(int n, Long userId) {
         return IntStream.range(0, n)
-                .mapToObj(i -> new ScoreCard(userId, (long)i))
+                .mapToObj(i -> new ScoreCard(userId, (long) i))
                 .collect(Collectors.toList());
     }
 }

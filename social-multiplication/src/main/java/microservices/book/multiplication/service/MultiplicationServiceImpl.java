@@ -52,7 +52,7 @@ class MultiplicationServiceImpl implements MultiplicationService {
 
         // Check if the attempt is correct
         boolean isCorrect = attempt.getResultAttempt() ==
-                        attempt.getMultiplication().getFactorA() *
+                attempt.getMultiplication().getFactorA() *
                         attempt.getMultiplication().getFactorB();
 
         MultiplicationResultAttempt checkedAttempt = new MultiplicationResultAttempt(
