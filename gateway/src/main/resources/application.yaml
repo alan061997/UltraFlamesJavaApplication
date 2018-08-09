@@ -1,26 +1,32 @@
 server:
   port: 8083
-
 zuul:
+  ignoredServices: '*'
   prefix: /api
   routes:
     multiplications:
       path: /multiplications/**
-      url: http://localhost:8085/multiplications
+      serviceId: multiplication
+      strip-prefix: false
     results:
       path: /results/**
-      url: http://localhost:8085/results
+      serviceId: multiplication
+      strip-prefix: false
     leaders:
       path: /leaders/**
-      url: http://localhost:8086/leaders
-    stats: /stats/**
-      path:
-      url: http://localhost:8086/stats
+      serviceId: gamification
+      strip-prefix: false
+    stats:
+      path: /stats/**
+      serviceId: gamification
+      strip-prefix: false
 
-endpoint:
+endpoints:
+  routes:
+    sensitive: false
   trace:
     sensitive: false
-
-ribbon:
   eureka:
-    enabled: false
+    client:
+      service-url:
+        default-zone: http://localhost:8761/eureka/
